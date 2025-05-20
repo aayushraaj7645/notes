@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">notes</string>
+    <string name="field_are_empty"> This field is empty</string>
+</resources>
