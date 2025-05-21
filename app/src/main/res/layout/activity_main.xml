@@ -33,7 +33,6 @@
             android:gravity="top|start"
             android:hint="Input box"
             android:inputType="textMultiLine"
-            android:maxLines="100"
             android:minLines="10"
             android:overScrollMode="always"
             android:padding="12dp"

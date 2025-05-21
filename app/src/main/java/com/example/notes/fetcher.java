@@ -45,10 +45,14 @@ public class fetcher extends AppCompatActivity {
 
 
     public void getroomdata(){
+
         new Thread(() -> {
 
 
-            List<user> user = database.userDao().fetch();
+            //List<user> user = database.userDao().fetcher();
+          List<user> user = database.userDao().fetch();
+
+
 
 
             runOnUiThread(() -> {
@@ -57,5 +61,12 @@ public class fetcher extends AppCompatActivity {
 
             });
         }).start();
+
+
+    }
+    @Override
+    protected void onResume() {
+        super.onResume();
+        getroomdata();
     }
 }

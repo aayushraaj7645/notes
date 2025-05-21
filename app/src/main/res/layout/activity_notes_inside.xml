@@ -7,4 +7,41 @@
     android:layout_height="match_parent"
     tools:context=".notes_inside">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/tittle_data_box"
+            android:layout_width="match_parent"
+            android:layout_height="84dp"
+            android:padding="12dp"
+            android:ems="10"
+            android:gravity="start|top"
+            android:overScrollMode="always"
+            android:scrollbars="vertical"
+            android:hint="YOUR TITTLE"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/notes_data_box"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:minLines="10"
+            android:padding="12dp"
+            android:gravity="start|top"
+            android:hint="YOUR DATA "
+            android:overScrollMode="always"
+            android:scrollbars="vertical"
+            android:nestedScrollingEnabled="true"
+            android:inputType="textMultiLine" />
+
+        <Button
+            android:id="@+id/edit_save"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SAVE" />
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

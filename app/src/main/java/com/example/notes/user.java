@@ -8,6 +8,15 @@ public class user {
     @PrimaryKey(autoGenerate = true)
      public int uid;
 
+    @ColumnInfo(name = "tittle")
+    String tittle;
+
+    @ColumnInfo(name = "input_box")
+    String input_box;
+
+    public static void remove(int position) {
+    }
+
 
     public int getUid() {
         return uid;
@@ -33,11 +42,6 @@ public class user {
         this.input_box = input_box;
     }
 
-    @ColumnInfo(name = "tittle")
-    String tittle;
-
-    @ColumnInfo(name = "input_box")
-    String input_box;
 
     public user(String tittle, String input_box) {
         this.tittle = tittle;
