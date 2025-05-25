@@ -9,6 +9,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ScrollView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -42,12 +43,8 @@ public class notes_inside extends AppCompatActivity {
         tittle_data_box =findViewById(R.id.tittle_data_box);
         notes_data_box=findViewById(R.id.notes_data_box);
         edit_save = findViewById(R.id.edit_save);
-
-
-
-
-
-
+        ScrollView scrollView = findViewById(R.id.main);
+        notes_data_box.setMovementMethod(new android.text.method.ScrollingMovementMethod());
 
 
 
@@ -73,27 +70,33 @@ public class notes_inside extends AppCompatActivity {
                 });
             }
         });
-        notes_data_box.setMovementMethod(new android.text.method.ScrollingMovementMethod());
-        notes_data_box.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                v.getParent().requestDisallowInterceptTouchEvent(true);
+//        edit_save.setOnClickListener(v -> {
+//            // Your save logic
+//
+//            // Scroll to bottom so button is not hidden
+//
+//            scrollView.post(() -> scrollView.fullScroll(View.FOCUS_DOWN));
+//        });
 
-                if (event.getAction() == MotionEvent.ACTION_UP || event.getAction() == MotionEvent.ACTION_CANCEL) {
-                    v.getParent().requestDisallowInterceptTouchEvent(false);
-                }
-
-                return false;
-            }
-
-
-
-        });
+//
+//        notes_data_box.setOnTouchListener(new View.OnTouchListener() {
+//            @Override
+//            public boolean onTouch(View v, MotionEvent event) {
+//                v.getParent().requestDisallowInterceptTouchEvent(true);
+//
+//                if (event.getAction() == MotionEvent.ACTION_UP || event.getAction() == MotionEvent.ACTION_CANCEL) {
+//                    v.getParent().requestDisallowInterceptTouchEvent(false);
+//                }
+//
+//                return false;
+//            }
+//        });
         class clicking {
             private final String tittle_text;
             private final String input_box_text;
 
-            clicking(String tittle_text, String input_box_text) {
+            clicking(String tittle_text, String input_box_text)
+            {
                 this.tittle_text = tittle_text;
                 this.input_box_text = input_box_text;
             }

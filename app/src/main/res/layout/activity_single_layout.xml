@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_marginBottom="25dp"
     tools:context=".single_layout"
-    android:layout_marginBottom="16dp">
+    android:paddingBottom="50dp">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="351dp"
+        android:layout_height="match_parent"
         android:background="#FFFFFF"
         android:orientation="horizontal">
 
@@ -18,7 +19,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#275F89"
+            android:background="#00BCD4"
             android:orientation="vertical">
 
             <EditText
@@ -39,15 +40,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:background="#F2EDE071"
+                android:background="#F071DFED"
                 android:ems="10"
                 android:gravity="start"
                 android:hint="Notes data will appear here"
                 android:inputType="textMultiLine"
-                android:maxLines="10"
+                android:maxLines="2"
+                android:minLines="2"
                 android:nestedScrollingEnabled="true"
                 android:overScrollMode="always"
                 android:scrollbars="vertical"
+                android:shadowRadius="82"
                 android:textColor="#070000"
                 android:textColorHint="#090000" />
 
@@ -62,15 +65,15 @@
                     android:layout_height="58dp"
                     android:layout_weight="1"
                     android:background="#F6F2F2"
-                    app:srcCompat="@drawable/delete_key" />
+                    app:srcCompat="@drawable/dustbin" />
 
                 <ImageView
                     android:id="@+id/open_image"
                     android:layout_width="match_parent"
                     android:layout_height="58dp"
-
                     android:layout_weight="1"
-                    android:src="@drawable/openbutton_png" />
+                    android:background="#F8F1F1"
+                    android:src="@drawable/treimg" />
 
             </LinearLayout>
 
@@ -78,4 +81,4 @@
 
     </LinearLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.appcompat.widget.LinearLayoutCompat>

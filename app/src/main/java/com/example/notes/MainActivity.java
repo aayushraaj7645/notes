@@ -55,13 +55,17 @@ public class MainActivity extends AppCompatActivity {
                 this.input_box_text = input_box_text;
             }
         public void click() {
+            String cs = tittle.getText().toString();
+            String cs1 = input_box.getText().toString();
+            String empty_field = getString(R.string.field_are_empty);
                 new Thread(() -> {
-                    if (tittle_text.isEmpty() || input_box_text.isEmpty()) {
-                        String empty_field = getString(R.string.field_are_empty);
-                        if (input_box_text.isEmpty()) {
+
+                    if ((tittle_text.isEmpty() || input_box_text.isEmpty())||(cs.equals(empty_field) && cs1.equals(empty_field))) {
+
+                        if (input_box_text.isEmpty()||cs.equals(empty_field)) {
                             input_box.setText(empty_field);
                         }
-                        if (tittle_text.isEmpty()) {
+                        if (tittle_text.isEmpty()||cs1.equals(empty_field)) {
                             tittle.setText(empty_field);
                         }
                         if (tittle_text.isEmpty() && input_box_text.isEmpty()) {
